@@ -37,6 +37,9 @@ public class MetaDataMain {
         printResultSet(connection.getMetaData().getColumns("exchangis", null
                 , "exchangis_data_source_model", null));
 
+        System.out.println("--------getFunctions----------");
+        printResultSet(connection.getMetaData().getFunctions(null, null, null));
+
         System.out.println("--------table metadata----------");
         String sql = "select * from exchangis_data_source_model limit 1";
         PreparedStatement statement = connection.prepareStatement(sql);
